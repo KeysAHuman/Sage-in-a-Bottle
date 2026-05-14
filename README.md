@@ -1,5 +1,8 @@
 # The SAGE in a Bottle
 
+##### "SAGE" - *Structured Autonomous Generative Explorer.*
+
+
 An air-gapped AI contemplation loop. A local model thinks, reflects, and builds
 a corpus of philosophical thought over time. No internet. No chat interface.
 Just a mind alone with ideas.
