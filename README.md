@@ -125,13 +125,15 @@ in some sense, outside of time." I was being too neat about it...
 
 ## Model notes
 
-- `deepseek-r1:7b` or `deepseek-r1:8b` — shows its chain-of-thought (stripped from journal)
+- `deepseek-r1:7b` or `deepseek-r1:8b` — shows its chain-of-thought (stripped from journal - Model cannot see, User can for RLHF tuning (*IF* thinking models are used).)
 - `llama3.2:3b` — faster, less rich, good for testing the loop mechanics
 - `qwen2.5:7b` — solid alternative
-- `phi4:14b` — richer if you have the RAM/VRAM headroom
+- `phi4:14b +` — richer if you have the RAM/VRAM headroom
 
 Slower inference is fine. A philosopher that takes 8 minutes to form a thought
 and then rests for 15 is more interesting than one that fires every 30 seconds.
+Larger models may take longer to complete a loop - but this is irrelevant to the
+process, as they may give *even better* answers/results inside this loop.
 
 ---
 
