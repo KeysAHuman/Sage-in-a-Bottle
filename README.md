@@ -53,6 +53,7 @@ pip install -r requirements.txt
 ```
 
 **2. Pull required Ollama models**
+(skip to 3 if you already have models downlaoded/ssetup in Ollama.)
 ```bash
 ollama pull nomic-embed-text    # for embeddings (required)
 ollama pull deepseek-r1:8b      # or whatever model you want to use
