@@ -1,0 +1,36 @@
+# ═══════════════════════════════════════════════
+#  THE VAULT — configuration
+# ═══════════════════════════════════════════════
+
+vault_name: "The Philosopher"
+
+ollama:
+  host: "http://localhost:11434"
+  model: "sage:latest"        # change to whatever you have pulled
+  embed_model: "nomic-embed-text:latest"        # pull with `ollama pull nomic-embed-text`
+  temperature: 0.85
+  num_predict: -1               # max tokens per thought
+
+# ── Loop timing ─────────────────────────────────
+loop:
+  min_sleep_sec: 300    # 5 min  — shortest rest between thoughts
+  max_sleep_sec: 1200   # 20 min — longest rest
+  # Actual sleep varies by thought density (longer thought = longer rest)
+
+# ── Mode weights (must sum to ~1.0) ─────────────
+modes:
+  free_associate:       0.30   # unprompted thinking
+  retrieve_and_reflect: 0.30   # return to an old thought
+  synthesize:           0.20   # find tension/harmony between two thoughts
+  read_text:            0.15   # respond to a library passage
+  write_aphorism:       0.05   # distill something to its essence
+
+# ── Memory & storage ────────────────────────────
+memory:
+  data_dir: "./data"            # journals, chromadb, status file
+  library_dir: "./library"      # pre-loaded texts for read_text mode
+
+# ── Observer ────────────────────────────────────
+observer:
+  status_file: "./data/status.json"
+  refresh_sec: 10
