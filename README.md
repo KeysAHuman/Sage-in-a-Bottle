@@ -51,12 +51,14 @@ the-vault/
 ## Setup
 
 **1. Install dependencies**
+
 Enter the cloned directory via Terminal, and install the requirements (assuming you have Ollama installed/setup).
 ```bash
 pip install -r requirements.txt
 ```
 
 **2. Pull required Ollama models**
+
 (skip to step 4 if you already have model(s) downloaded/setup through Ollama.)
 ```bash
 ollama pull nomic-embed-text    # for embeddings (required)
@@ -64,7 +66,8 @@ ollama pull deepseek-r1-distill-qwen-14b-q8_0:14b      # or whatever model you w
 ```
 
 **3. Create the Ollama model**
-Enter the directory where your model .GGUF is located via Terminal, and place the `Modelfile.sage` file alongside it. (or move your GGUF to your cloned repo temporarily)
+
+Enter the directory where your model.GGUF is located via Terminal, and place the `Modelfile.sage` file alongside it. (or move your GGUF to your cloned repo temporarily)
 Then, type or paste the following;
 ```bash
 ollama create <your_model_name> -f Modelfile.sage
@@ -73,7 +76,9 @@ ollama create <your_model_name> -f Modelfile.sage
 If you've named your model `SAGE`, you can jump straight to running the Daemon (Step 6) here without extra steps.
 
 **4. Edit config.yaml**
-Change `ollama.model` to whichever model you have.  Don't forget `:latest` if ollama shows this in the name.
+
+Change `ollama.model` to whichever model you have.  (Don't forget `:latest` if ollama shows this in the name.)
+
 Adjust sleep times if you want faster/slower cycling.
 
 **5. (Optional) Add library texts**
