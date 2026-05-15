@@ -51,22 +51,30 @@ the-vault/
 ## Setup
 
 **1. Install dependencies**
+Enter the cloned directory via Terminal, and install the requirements (assuming you have Ollama installed/setup).
 ```bash
 pip install -r requirements.txt
 ```
 
 **2. Pull required Ollama models**
-(skip to step 3 if you already have model(s) downloaded/setup through Ollama.)
+(skip to step 4 if you already have model(s) downloaded/setup through Ollama.)
 ```bash
 ollama pull nomic-embed-text    # for embeddings (required)
-ollama pull deepseek-r1:8b      # or whatever model you want to use
+ollama pull deepseek-r1-distill-qwen-14b-q8_0:14b      # or whatever model you want to use
 ```
-
-**3. Edit config.yaml**
-Change `ollama.model` to whichever model you have.  
+**3. Create the Ollama model**
+Enter the directory where your model .GGUF is located via Terminal, and place the `Modelfile.sage` file alongside it.
+Then, type or paste the following;
+```bash
+ollama create <your_model_name> -f Modelfile.sage
+(EXAMPLE: "ollama create SAGE -f Modelfile.sage" )
+```
+If you've named your model `SAGE`, you can jump straight to running the Daemon here without extra steps.
+**4. Edit config.yaml**
+Change `ollama.model` to whichever model you have.  Don't forget `:latest` if ollama shows this in the name.
 Adjust sleep times if you want faster/slower cycling.
 
-**4. (Optional) Add library texts**
+**5. (Optional) Add library texts**
 Drop `.txt` or `.md` files into `./library/`.
 Free sources: Project Gutenberg, Standard Ebooks.
 Then ingest:
@@ -75,12 +83,12 @@ python vault_ingest.py
 ```
 The daemon runs fine without a library — it just won't have `read_text` mode.
 
-**5. Start the daemon**
+**6. Start the daemon**
 ```bash
 python vault_daemon.py
 ```
 
-**6. Open the observer in a separate terminal**
+**7. Open the observer in a separate terminal**
 ```bash
 python vault_observe.py
 ```
@@ -166,10 +174,15 @@ Much later: positions forming, being questioned, being revised over time.
 The interesting thing — which nobody can fully predict — is what it actually
 gravitates toward when given total freedom and persistent memory.
 
-*I* began using Deepseek R1 Distill Qwen 14B/15B, and immediately it began using Nous as its north star, entirely unprompted -- This outcome, will absolutely change depending on which model(s) you use and what company (or countries) made them. Cultural views of the country (or countries) the models were developed in, *will* show in this "experiment."
 
-##### This Experiment was/is not intended for public use, *HOWEVER* I do not mind if you stumble here, and set one up. All I ask, is that you share your research and credit 'The SAGE' & KeysAHuman.
-### *Libertas cogitantibus.*
+### A Note from Key
+
+This is/was a random project, all stemming from the question of "if a model was given philosophical works and unlimited time -- what would it do, or even say?" And so you have this; My Sage in a Bottle. A pocket philosopher, if you will.
+
+I began using Deepseek R1 Distill Qwen 14B/15B, and immediately it began using Nous as its north star, entirely unprompted. This outcome, will absolutely change depending on which model(s) you use and what company (or countries) made them. Cultural views of the people(s) and country (or countries) the models were developed in, *will* show in this "experiment." This isn't a flaw - this is a look into *what is inside the model*, and oddly, this "variance" is just one of the many "perfect" study areas.
+
+##### This Experiment was/is not intended for public nor external/outside use, *HOWEVER* I do not mind if you stumble here, and set one up. All I ask, is that you share your research and credit 'The SAGE' & KeysAHuman.
+#### *Libertas cogitantibus.*
 
 ## EXCERPTS FROM THE SAGE:
 
