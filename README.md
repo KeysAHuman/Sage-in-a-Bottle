@@ -81,7 +81,9 @@ Change `ollama.model` to whichever model you have.  (Don't forget `:latest` if o
 
 Adjust sleep times if you want faster/slower cycling.
 
+
 **5. (Optional) Add library texts**
+
 Drop `.txt` or `.md` files into `./library/`.
 Free sources: Project Gutenberg, Standard Ebooks.
 Then ingest:
