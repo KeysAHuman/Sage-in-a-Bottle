@@ -62,14 +62,16 @@ pip install -r requirements.txt
 ollama pull nomic-embed-text    # for embeddings (required)
 ollama pull deepseek-r1-distill-qwen-14b-q8_0:14b      # or whatever model you want to use
 ```
+
 **3. Create the Ollama model**
-Enter the directory where your model .GGUF is located via Terminal, and place the `Modelfile.sage` file alongside it.
+Enter the directory where your model .GGUF is located via Terminal, and place the `Modelfile.sage` file alongside it. (or move your GGUF to your cloned repo temporarily)
 Then, type or paste the following;
 ```bash
 ollama create <your_model_name> -f Modelfile.sage
 (EXAMPLE: "ollama create SAGE -f Modelfile.sage" )
 ```
-If you've named your model `SAGE`, you can jump straight to running the Daemon here without extra steps.
+If you've named your model `SAGE`, you can jump straight to running the Daemon (Step 6) here without extra steps.
+
 **4. Edit config.yaml**
 Change `ollama.model` to whichever model you have.  Don't forget `:latest` if ollama shows this in the name.
 Adjust sleep times if you want faster/slower cycling.
@@ -81,6 +83,7 @@ Then ingest:
 ```bash
 python vault_ingest.py
 ```
+
 The daemon runs fine without a library — it just won't have `read_text` mode.
 
 **6. Start the daemon**
