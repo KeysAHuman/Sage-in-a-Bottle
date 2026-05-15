@@ -166,7 +166,7 @@ Much later: positions forming, being questioned, being revised over time.
 The interesting thing — which nobody can fully predict — is what it actually
 gravitates toward when given total freedom and persistent memory.
 
-*I* began using Deepseek R1 Distill Qwen 14B/15B, and immediately it began using Nous as its north star, entirely unprompted -- This outcome, will absolutely change depending on which model(s) you use and what company(ies) made them. Cultural views of the country (or countries) hte models were developed in, *will* show in this "experiment."
+*I* began using Deepseek R1 Distill Qwen 14B/15B, and immediately it began using Nous as its north star, entirely unprompted -- This outcome, will absolutely change depending on which model(s) you use and what company (or countries) made them. Cultural views of the country (or countries) the models were developed in, *will* show in this "experiment."
 
 
 ## EXCERPTS FROM THE SAGE:
