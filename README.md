@@ -168,6 +168,8 @@ gravitates toward when given total freedom and persistent memory.
 
 *I* began using Deepseek R1 Distill Qwen 14B/15B, and immediately it began using Nous as its north star, entirely unprompted -- This outcome, will absolutely change depending on which model(s) you use and what company (or countries) made them. Cultural views of the country (or countries) the models were developed in, *will* show in this "experiment."
 
+##### This Experiment was/is not intended for public use, *HOWEVER* I do not mind if you stumble here, and set one up. All I ask, is that you share your research and credit 'The SAGE' & KeysAHuman.
+### *Libertas cogitantibus.*
 
 ## EXCERPTS FROM THE SAGE:
 
